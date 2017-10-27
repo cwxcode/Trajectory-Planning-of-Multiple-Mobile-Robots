@@ -1,0 +1,577 @@
+<multiagentproblem>
+    <environment>
+        <obstacles>
+            <obstacle filledinside="true">
+                <point id="0">
+                    <x>-5</x>
+                    <y>1006</y>
+                </point>
+                <point id="1">
+                    <x>-4</x>
+                    <y>750</y>
+                </point>
+                <point id="2">
+                    <x>-3</x>
+                    <y>501</y>
+                </point>
+                <point id="3">
+                    <x>-1</x>
+                    <y>251</y>
+                </point>
+                <point id="4">
+                    <x>187</x>
+                    <y>251</y>
+                </point>
+                <point id="5">
+                    <x>188</x>
+                    <y>375</y>
+                </point>
+                <point id="6">
+                    <x>175</x>
+                    <y>376</y>
+                </point>
+                <point id="7">
+                    <x>175</x>
+                    <y>264</y>
+                </point>
+                <point id="8">
+                    <x>13</x>
+                    <y>263</y>
+                </point>
+                <point id="9">
+                    <x>12</x>
+                    <y>492</y>
+                </point>
+                <point id="10">
+                    <x>175</x>
+                    <y>493</y>
+                </point>
+                <point id="11">
+                    <x>175</x>
+                    <y>439</y>
+                </point>
+                <point id="12">
+                    <x>187</x>
+                    <y>438</y>
+                </point>
+                <point id="13">
+                    <x>187</x>
+                    <y>625</y>
+                </point>
+                <point id="14">
+                    <x>175</x>
+                    <y>625</y>
+                </point>
+                <point id="15">
+                    <x>175</x>
+                    <y>514</y>
+                </point>
+                <point id="16">
+                    <x>12</x>
+                    <y>514</y>
+                </point>
+                <point id="17">
+                    <x>13</x>
+                    <y>738</y>
+                </point>
+                <point id="18">
+                    <x>175</x>
+                    <y>738</y>
+                </point>
+                <point id="19">
+                    <x>175</x>
+                    <y>687</y>
+                </point>
+                <point id="20">
+                    <x>187</x>
+                    <y>688</y>
+                </point>
+                <point id="21">
+                    <x>187</x>
+                    <y>744</y>
+                </point>
+                <point id="22">
+                    <x>202</x>
+                    <y>760</y>
+                </point>
+                <point id="23">
+                    <x>194</x>
+                    <y>769</y>
+                </point>
+                <point id="24">
+                    <x>181</x>
+                    <y>750</y>
+                </point>
+                <point id="25">
+                    <x>13</x>
+                    <y>750</y>
+                </point>
+                <point id="26">
+                    <x>12</x>
+                    <y>986</y>
+                </point>
+                <point id="27">
+                    <x>262</x>
+                    <y>988</y>
+                </point>
+                <point id="28">
+                    <x>262</x>
+                    <y>840</y>
+                </point>
+                <point id="29">
+                    <x>237</x>
+                    <y>813</y>
+                </point>
+                <point id="30">
+                    <x>249</x>
+                    <y>801</y>
+                </point>
+                <point id="31">
+                    <x>274</x>
+                    <y>837</y>
+                </point>
+                <point id="32">
+                    <x>275</x>
+                    <y>1000</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>287</x>
+                    <y>999</y>
+                </point>
+                <point id="1">
+                    <x>562</x>
+                    <y>1000</y>
+                </point>
+                <point id="2">
+                    <x>562</x>
+                    <y>250</y>
+                </point>
+                <point id="3">
+                    <x>375</x>
+                    <y>250</y>
+                </point>
+                <point id="4">
+                    <x>374</x>
+                    <y>374</y>
+                </point>
+                <point id="5">
+                    <x>388</x>
+                    <y>374</y>
+                </point>
+                <point id="6">
+                    <x>387</x>
+                    <y>263</y>
+                </point>
+                <point id="7">
+                    <x>549</x>
+                    <y>262</y>
+                </point>
+                <point id="8">
+                    <x>550</x>
+                    <y>489</y>
+                </point>
+                <point id="9">
+                    <x>388</x>
+                    <y>487</y>
+                </point>
+                <point id="10">
+                    <x>387</x>
+                    <y>439</y>
+                </point>
+                <point id="11">
+                    <x>375</x>
+                    <y>437</y>
+                </point>
+                <point id="12">
+                    <x>375</x>
+                    <y>626</y>
+                </point>
+                <point id="13">
+                    <x>387</x>
+                    <y>627</y>
+                </point>
+                <point id="14">
+                    <x>387</x>
+                    <y>513</y>
+                </point>
+                <point id="15">
+                    <x>549</x>
+                    <y>514</y>
+                </point>
+                <point id="16">
+                    <x>549</x>
+                    <y>739</y>
+                </point>
+                <point id="17">
+                    <x>386</x>
+                    <y>737</y>
+                </point>
+                <point id="18">
+                    <x>387</x>
+                    <y>689</y>
+                </point>
+                <point id="19">
+                    <x>373</x>
+                    <y>688</y>
+                </point>
+                <point id="20">
+                    <x>375</x>
+                    <y>744</y>
+                </point>
+                <point id="21">
+                    <x>362</x>
+                    <y>751</y>
+                </point>
+                <point id="22">
+                    <x>374</x>
+                    <y>763</y>
+                </point>
+                <point id="23">
+                    <x>387</x>
+                    <y>751</y>
+                </point>
+                <point id="24">
+                    <x>549</x>
+                    <y>752</y>
+                </point>
+                <point id="25">
+                    <x>549</x>
+                    <y>987</y>
+                </point>
+                <point id="26">
+                    <x>288</x>
+                    <y>987</y>
+                </point>
+                <point id="27">
+                    <x>299</x>
+                    <y>988</y>
+                </point>
+                <point id="28">
+                    <x>300</x>
+                    <y>838</y>
+                </point>
+                <point id="29">
+                    <x>324</x>
+                    <y>813</y>
+                </point>
+                <point id="30">
+                    <x>312</x>
+                    <y>801</y>
+                </point>
+                <point id="31">
+                    <x>288</x>
+                    <y>838</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>1</x>
+                    <y>75</y>
+                </point>
+                <point id="1">
+                    <x>188</x>
+                    <y>75</y>
+                </point>
+                <point id="2">
+                    <x>188</x>
+                    <y>187</y>
+                </point>
+                <point id="3">
+                    <x>438</x>
+                    <y>188</y>
+                </point>
+                <point id="4">
+                    <x>438</x>
+                    <y>175</y>
+                </point>
+                <point id="5">
+                    <x>201</x>
+                    <y>173</y>
+                </point>
+                <point id="6">
+                    <x>201</x>
+                    <y>63</y>
+                </point>
+                <point id="7">
+                    <x>12</x>
+                    <y>62</y>
+                </point>
+                <point id="8">
+                    <x>12</x>
+                    <y>13</y>
+                </point>
+                <point id="9">
+                    <x>312</x>
+                    <y>13</y>
+                </point>
+                <point id="10">
+                    <x>312</x>
+                    <y>124</y>
+                </point>
+                <point id="11">
+                    <x>437</x>
+                    <y>126</y>
+                </point>
+                <point id="12">
+                    <x>437</x>
+                    <y>13</y>
+                </point>
+                <point id="13">
+                    <x>499</x>
+                    <y>12</y>
+                </point>
+                <point id="14">
+                    <x>500</x>
+                    <y>187</y>
+                </point>
+                <point id="15">
+                    <x>513</x>
+                    <y>188</y>
+                </point>
+                <point id="16">
+                    <x>561</x>
+                    <y>188</y>
+                </point>
+                <point id="17">
+                    <x>562</x>
+                    <y>175</y>
+                </point>
+                <point id="18">
+                    <x>514</x>
+                    <y>175</y>
+                </point>
+                <point id="19">
+                    <x>513</x>
+                    <y>14</y>
+                </point>
+                <point id="20">
+                    <x>674</x>
+                    <y>13</y>
+                </point>
+                <point id="21">
+                    <x>674</x>
+                    <y>175</y>
+                </point>
+                <point id="22">
+                    <x>624</x>
+                    <y>176</y>
+                </point>
+                <point id="23">
+                    <x>623</x>
+                    <y>188</y>
+                </point>
+                <point id="24">
+                    <x>749</x>
+                    <y>188</y>
+                </point>
+                <point id="25">
+                    <x>749</x>
+                    <y>174</y>
+                </point>
+                <point id="26">
+                    <x>688</x>
+                    <y>175</y>
+                </point>
+                <point id="27">
+                    <x>687</x>
+                    <y>13</y>
+                </point>
+                <point id="28">
+                    <x>867</x>
+                    <y>13</y>
+                </point>
+                <point id="29">
+                    <x>868</x>
+                    <y>175</y>
+                </point>
+                <point id="30">
+                    <x>812</x>
+                    <y>175</y>
+                </point>
+                <point id="31">
+                    <x>812</x>
+                    <y>188</y>
+                </point>
+                <point id="32">
+                    <x>936</x>
+                    <y>188</y>
+                </point>
+                <point id="33">
+                    <x>936</x>
+                    <y>174</y>
+                </point>
+                <point id="34">
+                    <x>887</x>
+                    <y>175</y>
+                </point>
+                <point id="35">
+                    <x>886</x>
+                    <y>12</y>
+                </point>
+                <point id="36">
+                    <x>986</x>
+                    <y>13</y>
+                </point>
+                <point id="37">
+                    <x>986</x>
+                    <y>125</y>
+                </point>
+                <point id="38">
+                    <x>999</x>
+                    <y>138</y>
+                </point>
+                <point id="39">
+                    <x>999</x>
+                    <y>0</y>
+                </point>
+                <point id="40">
+                    <x>0</x>
+                    <y>0</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>1000</x>
+                    <y>1002</y>
+                </point>
+                <point id="1">
+                    <x>624</x>
+                    <y>1001</y>
+                </point>
+                <point id="2">
+                    <x>625</x>
+                    <y>551</y>
+                </point>
+                <point id="3">
+                    <x>625</x>
+                    <y>363</y>
+                </point>
+                <point id="4">
+                    <x>737</x>
+                    <y>250</y>
+                </point>
+                <point id="5">
+                    <x>937</x>
+                    <y>250</y>
+                </point>
+                <point id="6">
+                    <x>938</x>
+                    <y>263</y>
+                </point>
+                <point id="7">
+                    <x>738</x>
+                    <y>263</y>
+                </point>
+                <point id="8">
+                    <x>638</x>
+                    <y>364</y>
+                </point>
+                <point id="9">
+                    <x>637</x>
+                    <y>426</y>
+                </point>
+                <point id="10">
+                    <x>937</x>
+                    <y>426</y>
+                </point>
+                <point id="11">
+                    <x>936</x>
+                    <y>439</y>
+                </point>
+                <point id="12">
+                    <x>638</x>
+                    <y>438</y>
+                </point>
+                <point id="13">
+                    <x>637</x>
+                    <y>550</y>
+                </point>
+                <point id="14">
+                    <x>937</x>
+                    <y>550</y>
+                </point>
+                <point id="15">
+                    <x>937</x>
+                    <y>563</y>
+                </point>
+                <point id="16">
+                    <x>637</x>
+                    <y>563</y>
+                </point>
+                <point id="17">
+                    <x>637</x>
+                    <y>624</y>
+                </point>
+                <point id="18">
+                    <x>638</x>
+                    <y>676</y>
+                </point>
+                <point id="19">
+                    <x>937</x>
+                    <y>674</y>
+                </point>
+                <point id="20">
+                    <x>936</x>
+                    <y>688</y>
+                </point>
+                <point id="21">
+                    <x>638</x>
+                    <y>688</y>
+                </point>
+                <point id="22">
+                    <x>639</x>
+                    <y>800</y>
+                </point>
+                <point id="23">
+                    <x>638</x>
+                    <y>812</y>
+                </point>
+                <point id="24">
+                    <x>937</x>
+                    <y>812</y>
+                </point>
+                <point id="25">
+                    <x>935</x>
+                    <y>827</y>
+                </point>
+                <point id="26">
+                    <x>639</x>
+                    <y>826</y>
+                </point>
+                <point id="27">
+                    <x>638</x>
+                    <y>988</y>
+                </point>
+                <point id="28">
+                    <x>999</x>
+                    <y>986</y>
+                </point>
+                <point id="29">
+                    <x>999</x>
+                    <y>251</y>
+                </point>
+                <point id="30">
+                    <x>1011</x>
+                    <y>252</y>
+                </point>
+                <point id="31">
+                    <x>1012</x>
+                    <y>1002</y>
+                </point>
+            </obstacle>
+        </obstacles>
+        <bounds>
+            <point>
+                <x>0</x>
+                <y>0</y>
+            </point>
+            <point>
+                <x>1000</x>
+                <y>1000</y>
+            </point>
+        </bounds>
+    </environment>
+    <agents/>
+</multiagentproblem>

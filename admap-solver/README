@@ -1,0 +1,60 @@
+Decentralized Multi-robot Planning
+==================================
+
+Compiling
+---------
+The dependencies are managed using Maven. To compile the project and create a jar archive with dependencies run:	
+
+$ mvn package
+
+The jar archive with all dependencies will be in:
+
+target/admap-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+To update the implementation of algorithms used in the experiment, replace solver.jar with the newly build jar package:
+
+cp target/admap-1.0-SNAPSHOT-jar-with-dependencies.jar ../solver.jar
+
+Alternatively, you can open the project in your favorite IDE, i.e. in Eclipse.
+
+Getting started
+---------------
+
+The planners are run through cz.agents.admap.creator.ScenarioCreator class. 
+
+Parameters:
+  -problemfile 		Path to an xml file with problem description.
+  -method			Specifies method to be used to solve the problem. One of {PP, RPP, SDPP, SDRPP, ADPP, ADRPP, ORCA}.
+  -maxtime			Specifies the maximum time considered during trajectory planning.
+  -timestep			The discretization of time-dimension used during trajectory planning.
+  -showvis          Turns on/off the visualization.
+  
+Detailed information can be derived from the source code, in particular from the method cz.agents.admap.creator.ScenarioCreator.createFromArgs().  
+
+Example: 
+--------
+
+	The following command will run the ADRPP on the example problem instance described in file instances/ubremen-r27-docks/249.xml.
+
+	$ java -jar admap-solver/target/admap-1.0-SNAPSHOT-jar-with-dependencies.jar cz.agents.admap.creator.ScenarioCreator -problemfile instances/ubremen-r27-docks/249.xml -method ADRPP -maxtime 15000 -timestep 27 -showvis
+
+Visualization control:  
+----------------------
+
+When the visualization window pops-up, use the following keys to toggle various useful visualization layers:
+  m - missions/tasks of agents
+  t - trajectories of agents
+  g - planning graph
+  c - conflicts between trajectories (may slow down the visualization if toggled on)
+  p - polygons representing obstacles 
+  
+The movement of agents can be simulated by pressing (and holding) the following keys:
+  q - move time forwards
+  a - move time backwards
+  <space> - reset time to 0
+  
+Dragging with right mouse button pressed moves the viewport. Mouse wheel zooms the view.
+  
+  
+  
+

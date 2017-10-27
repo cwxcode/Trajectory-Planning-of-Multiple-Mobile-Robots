@@ -1,0 +1,151 @@
+package tt.jointeuclid2ni.probleminstance;
+
+import java.awt.Color;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+
+import javax.vecmath.Point2d;
+
+import org.jgrapht.Graph;
+
+import tt.euclid2i.Line;
+import tt.euclid2i.Point;
+import tt.euclid2i.Region;
+import tt.euclid2i.region.Rectangle;
+import tt.euclid2i.vis.RegionsLayer;
+import tt.euclid2i.vis.RegionsLayer.RegionsProvider;
+import tt.euclidtime3i.vis.TimeParameter;
+import tt.util.AgentColors;
+import tt.vis.GraphLayer;
+import tt.vis.LabeledCircleLayer;
+import tt.vis.ParameterControlLayer;
+import tt.vis.TimeParameterHolder;
+import cz.agents.alite.vis.VisManager;
+import cz.agents.alite.vis.layer.common.ColorLayer;
+import cz.agents.alite.vis.layer.common.VisInfoLayer;
+import cz.agents.alite.vis.layer.toggle.KeyToggleLayer;
+
+public class VisUtil {
+
+    public static void initVisualization(final EarliestArrivalProblem problem, String title, int timeParameterStep) {
+        VisManager.setInitParam(title, 700, 700);
+        VisManager.setSceneParam(new VisManager.SceneParams() {
+
+            @Override
+            public Point2d getDefaultLookAt() {
+
+            	Rectangle bounds = problem.getEnvironment().getBoundary().getBoundingBox();
+
+                double x = bounds.getCorner1().x
+                        + ((bounds.getCorner2().x - bounds.getCorner1().x) / 2);
+                double y = bounds.getCorner1().y
+                        + ((bounds.getCorner2().y - bounds.getCorner1().y) / 2);
+
+                return new Point2d(x, y);
+            }
+
+            @Override
+            public double getDefaultZoomFactor() {
+                return 0.5;
+            }
+
+        });
+
+        if (TimeParameterHolder.time == null) {
+            TimeParameterHolder.time = new TimeParameter(timeParameterStep);
+            VisManager.registerLayer(ParameterControlLayer.create(TimeParameterHolder.time));
+        }
+
+        VisManager.init();
+    }
+
+    public static void visualizeProblem(final EarliestArrivalProblem problem) {
+        // background
+        VisManager.registerLayer(ColorLayer.create(Color.WHITE));
+
+        // boundary
+        VisManager.registerLayer(RegionsLayer.create(
+                new RegionsLayer.RegionsProvider() {
+
+                    @Override
+                    public Collection<Region> getRegions() {
+                        return Collections.singleton(problem.getEnvironment().getBoundary());
+                    }
+
+                }, Color.RED, Color.GRAY));
+
+//        VisManager.registerLayer(RegionsLayer.create(
+//                new RegionsLayer.RegionsProvider() {
+//
+//                    @Override
+//                    public Collection<Region> getRegions() {
+//                        LinkedList<Region> list = new LinkedList<Region>();
+//                        list.add(new Rectangle(new Point(0, 0), new Point(1000, 1000)));
+//                        return list;
+//                    }
+//
+//                }, Color.LIGHT_GRAY));
+
+        VisManager.registerLayer(RegionsLayer.create(
+                new RegionsLayer.RegionsProvider() {
+
+                    @Override
+                    public Collection<Region> getRegions() {
+                        return problem.getObstacles();
+                    }
+
+                }, Color.BLACK, Color.GRAY));
+
+        VisManager.registerLayer(LabeledCircleLayer.create(new LabeledCircleLayer.LabeledCircleProvider<tt.euclid2i.Point>() {
+
+            @Override
+            public Collection<LabeledCircleLayer.LabeledCircle<tt.euclid2i.Point>> getLabeledCircles() {
+                LinkedList<LabeledCircleLayer.LabeledCircle<tt.euclid2i.Point>> list = new LinkedList<LabeledCircleLayer.LabeledCircle<tt.euclid2i.Point>>();
+
+                for (int i = 0; i < problem.getStarts().length; i++) {
+                    list.add(new LabeledCircleLayer.LabeledCircle<tt.euclid2i.Point>(problem.getStart(i), problem.getBodyRadius(i), "s" + i, AgentColors.getColorForAgent(i)));
+                }
+
+                for (int i = 0; i < problem.getStarts().length; i++) {
+                    list.add(new LabeledCircleLayer.LabeledCircle<tt.euclid2i.Point>(problem.getTarget(i), problem.getBodyRadius(i), "g" + i, AgentColors.getColorForAgent(i).darker().darker()));
+                }
+
+                return list;
+            }
+
+        }, new tt.euclid2i.vis.ProjectionTo2d()));
+
+        // Overlay
+        VisManager.registerLayer(VisInfoLayer.create());
+
+    }
+
+    public static void visualizeGraph(final Graph<Point, Line> graphToVisualize,
+            final Collection<Region> inflatedObstacles) {
+
+        KeyToggleLayer toggleLayer = KeyToggleLayer.create("g");
+        toggleLayer.addSubLayer(
+                GraphLayer.create(new GraphLayer.GraphProvider<tt.euclid2i.Point, Line>() {
+
+                    @Override
+                    public Graph<tt.euclid2i.Point, Line> getGraph() {
+                        return graphToVisualize;
+                    }
+                }, new tt.euclid2i.vis.ProjectionTo2d(), Color.LIGHT_GRAY, Color.LIGHT_GRAY, 1, 4)
+        );
+
+        toggleLayer.addSubLayer(RegionsLayer.create(new RegionsProvider() {
+
+            @Override
+            public Collection<? extends Region> getRegions() {
+                return inflatedObstacles;
+            }
+        }, Color.YELLOW));
+
+
+        VisManager.registerLayer(toggleLayer);
+        // create spatio-temporal graph
+    }
+
+}

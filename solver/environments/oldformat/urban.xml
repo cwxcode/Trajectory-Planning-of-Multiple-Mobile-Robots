@@ -1,0 +1,137 @@
+<multiagentproblem>
+    <environment>
+        <obstacles>
+            <obstacle>
+                <point id="0">
+                    <x>112</x>
+                    <y>113</y>
+                </point>
+                <point id="1">
+                    <x>111</x>
+                    <y>333</y>
+                </point>
+                <point id="2">
+                    <x>333</x>
+                    <y>333</y>
+                </point>
+                <point id="3">
+                    <x>332</x>
+                    <y>112</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>553</x>
+                    <y>445</y>
+                </point>
+                <point id="1">
+                    <x>555</x>
+                    <y>665</y>
+                </point>
+                <point id="2">
+                    <x>111</x>
+                    <y>663</y>
+                </point>
+                <point id="3">
+                    <x>111</x>
+                    <y>445</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>111</x>
+                    <y>777</y>
+                </point>
+                <point id="1">
+                    <x>111</x>
+                    <y>888</y>
+                </point>
+                <point id="2">
+                    <x>444</x>
+                    <y>889</y>
+                </point>
+                <point id="3">
+                    <x>444</x>
+                    <y>779</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>444</x>
+                    <y>109</y>
+                </point>
+                <point id="1">
+                    <x>444</x>
+                    <y>333</y>
+                </point>
+                <point id="2">
+                    <x>556</x>
+                    <y>333</y>
+                </point>
+                <point id="3">
+                    <x>667</x>
+                    <y>113</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>667</x>
+                    <y>335</y>
+                </point>
+                <point id="1">
+                    <x>781</x>
+                    <y>113</y>
+                </point>
+                <point id="2">
+                    <x>888</x>
+                    <y>113</y>
+                </point>
+                <point id="3">
+                    <x>891</x>
+                    <y>333</y>
+                </point>
+            </obstacle>
+            <obstacle>
+                <point id="0">
+                    <x>667</x>
+                    <y>445</y>
+                </point>
+                <point id="1">
+                    <x>665</x>
+                    <y>667</y>
+                </point>
+                <point id="2">
+                    <x>665</x>
+                    <y>777</y>
+                </point>
+                <point id="3">
+                    <x>555</x>
+                    <y>780</y>
+                </point>
+                <point id="4">
+                    <x>553</x>
+                    <y>889</y>
+                </point>
+                <point id="5">
+                    <x>888</x>
+                    <y>888</y>
+                </point>
+                <point id="6">
+                    <x>888</x>
+                    <y>444</y>
+                </point>
+            </obstacle>
+        </obstacles>
+        <bounds>
+            <point>
+                <x>0</x>
+                <y>0</y>
+            </point>
+            <point>
+                <x>1000</x>
+                <y>1000</y>
+            </point>
+        </bounds>
+    </environment>
+    <agents/>
+</multiagentproblem>

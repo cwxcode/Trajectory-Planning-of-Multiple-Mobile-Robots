@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<multiagentproblem>
+<environment>
+<obstacles>
+<obstacle>
+<point id="0">
+<x>194</x>
+<y>157</y>
+</point>
+<point id="1">
+<x>196</x>
+<y>388</y>
+</point>
+<point id="2">
+<x>346</x>
+<y>391</y>
+</point>
+<point id="3">
+<x>345</x>
+<y>158</y>
+</point>
+</obstacle>
+<obstacle>
+<point id="0">
+<x>196</x>
+<y>598</y>
+</point>
+<point id="1">
+<x>345</x>
+<y>598</y>
+</point>
+<point id="2">
+<x>346</x>
+<y>753</y>
+</point>
+<point id="3">
+<x>196</x>
+<y>751</y>
+</point>
+</obstacle>
+<obstacle>
+<point id="0">
+<x>641</x>
+<y>49</y>
+</point>
+<point id="1">
+<x>639</x>
+<y>202</y>
+</point>
+<point id="2">
+<x>790</x>
+<y>202</y>
+</point>
+<point id="3">
+<x>794</x>
+<y>49</y>
+</point>
+</obstacle>
+<obstacle>
+<point id="0">
+<x>639</x>
+<y>411</y>
+</point>
+<point id="1">
+<x>639</x>
+<y>564</y>
+</point>
+<point id="2">
+<x>792</x>
+<y>566</y>
+</point>
+<point id="3">
+<x>792</x>
+<y>412</y>
+</point>
+</obstacle>
+<obstacle>
+<point id="0">
+<x>639</x>
+<y>775</y>
+</point>
+<point id="1">
+<x>639</x>
+<y>925</y>
+</point>
+<point id="2">
+<x>791</x>
+<y>927</y>
+</point>
+<point id="3">
+<x>792</x>
+<y>776</y>
+</point>
+</obstacle>
+</obstacles>
+<bounds>
+<point>
+<x>0</x>
+<y>0</y>
+</point>
+<point>
+<x>1000</x>
+<y>1000</y>
+</point>
+</bounds>
+</environment>
+<agents/>
+</multiagentproblem>

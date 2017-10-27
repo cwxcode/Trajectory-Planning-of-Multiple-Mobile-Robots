@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>Alite</name>
+    <groupId>cz.agents.alite</groupId>
+    <artifactId>alite</artifactId>
+    <version>1.1.1</version>
+    <!-- <version>1.0-SNAPSHOT</version> -->
+    <description>
+        A multipurpose toolkit (not only) for Agent Oriented Prototyping.
+
+        Alite is a software toolkit helping with particular implementation steps during construction of multi-agent simulations
+        and multi-agent systems in general. The goals of the toolkit are to provide highly modular, variable, and open set of
+        functionalities defined by clear and simple API. The toolkit does not serve as a pre-designed framework for one complex
+        purpose, it rather associates number of highly refined functional elements, which can be variably combined and extended
+        into a wide spectrum of possible systems.
+
+        http://jones.felk.cvut.cz/redmine/projects/alite/wiki
+        http://agents.felk.cvut.cz/projects#alite
+    </description>
+    <url>http://jones.felk.cvut.cz/redmine/projects/alite/wiki</url>
+
+	<organization>
+		<name>Agent Technology Center (ATG)</name>
+		<url>http://agents.felk.cvut.cz/</url>
+	</organization>
+	
+	<licenses>
+		<license>
+			<name>LGPL 3.0 license</name>
+			<url>http://www.opensource.org/licenses/lgpl-3.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<scm>
+		<url>http://jones.felk.cvut.cz/repo/alite</url>
+		<connection>scm:hg:http://jones.felk.cvut.cz/repo/alite</connection>
+	</scm>
+	
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<phase>package</phase>
+						<inherited>true</inherited>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> 
+				<version>2.9.1</version> <executions> <execution> <id>attach-javadocs</id> 
+				<goals> <goal>jar</goal> </goals> <phase>package</phase> <inherited>true</inherited> 
+				</execution> </executions> </plugin> -->
+		</plugins>
+	</build>
+	
+	<repositories>
+		<repository>
+			<id>atg-repo</id>
+			<name>atg-repo</name>
+			<url>http://jones.felk.cvut.cz/artifactory/repo</url>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<releases />
+		</repository>
+	</repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>java3d</groupId>
+            <artifactId>vecmath</artifactId>
+            <version>1.5.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>jgrapht-jdk1.6</groupId>
+            <artifactId>jgrapht-jdk1.6</artifactId>
+            <version>0.8.2</version>
+        </dependency>
+    </dependencies>
+    
+    <distributionManagement>
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>atg-repo</id>
+            <name>jones.felk.cvut.cz-snapshots</name>
+            <url>http://jones.felk.cvut.cz/artifactory/pub-snapshot-local</url>
+        </snapshotRepository>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>atg-repo</id>
+            <name>jones.felk.cvut.cz-releases</name>
+            <url>http://jones.felk.cvut.cz/artifactory/pub-release-local</url>
+        </repository>
+    </distributionManagement>
+
+</project>

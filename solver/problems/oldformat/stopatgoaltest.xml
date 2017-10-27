@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<multiagentproblem>
+<environment>
+<obstacles>
+<obstacle>
+<point id="0">
+<x>63</x>
+<y>443</y>
+</point>
+<point id="1">
+<x>63</x>
+<y>560</y>
+</point>
+<point id="2">
+<x>936</x>
+<y>559</y>
+</point>
+<point id="3">
+<x>939</x>
+<y>436</y>
+</point>
+<point id="4">
+<x>561</x>
+<y>439</y>
+</point>
+<point id="5">
+<x>561</x>
+<y>363</y>
+</point>
+<point id="6">
+<x>437</x>
+<y>363</y>
+</point>
+<point id="7">
+<x>437</x>
+<y>437</y>
+</point>
+<point id="8">
+<x>84</x>
+<y>437</y>
+</point>
+<point id="9">
+<x>89</x>
+<y>272</y>
+</point>
+<point id="10">
+<x>966</x>
+<y>251</y>
+</point>
+<point id="11">
+<x>965</x>
+<y>743</y>
+</point>
+<point id="12">
+<x>73</x>
+<y>712</y>
+</point>
+<point id="13">
+<x>7</x>
+<y>698</y>
+</point>
+<point id="14">
+<x>45</x>
+<y>364</y>
+</point>
+<point id="15">
+<x>81</x>
+<y>366</y>
+</point>
+<point id="16">
+<x>80</x>
+<y>438</y>
+</point>
+</obstacle>
+</obstacles>
+<bounds>
+<point>
+<x>0</x>
+<y>0</y>
+</point>
+<point>
+<x>1000</x>
+<y>1000</y>
+</point>
+</bounds>
+</environment>
+<agents>
+<agent>
+<start>
+<point>
+<x>358</x>
+<y>500</y>
+</point>
+</start>
+<target>
+<point>
+<x>525</x>
+<y>490</y>
+</point>
+</target>
+<radius>35</radius>
+<maxspeed>1</maxspeed>
+</agent>
+<agent>
+<start>
+<point>
+<x>875</x>
+<y>502</y>
+</point>
+</start>
+<target>
+<point>
+<x>126</x>
+<y>500</y>
+</point>
+</target>
+<radius>35</radius>
+<maxspeed>1</maxspeed>
+</agent>
+</agents>
+</multiagentproblem>

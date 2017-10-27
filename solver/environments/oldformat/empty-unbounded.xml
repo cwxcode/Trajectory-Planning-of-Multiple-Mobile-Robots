@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<multiagentproblem>
+<environment>
+<obstacles>
+</obstacles>
+<bounds>
+<point>
+<x>-1000</x>
+<y>-1000</y>
+</point>
+<point>
+<x>2000</x>
+<y>2000</y>
+</point>
+</bounds>
+</environment>
+<agents>
+</agents>
+</multiagentproblem>
